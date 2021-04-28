@@ -1,0 +1,12 @@
+// Place all the styles related to the Pictures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.card {
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: #C088E3;
+}
+.card:hover {
+    box-shadow: 10px 15px 20px;
+    transition: .3s;
+}
