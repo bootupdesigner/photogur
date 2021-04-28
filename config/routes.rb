@@ -9,13 +9,15 @@ resources :users, only: [:create, :show]
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy"
 
-# get 'users/new' => 'users#new', as: :new_user
+get 'users/new' => 'users#new', as: :new_user
 	
-# post 'users' => 'users#create'
+post 'users' => 'users#create'
 
-# get '/login'     => 'sessions#new'
+get '/login'     => 'sessions#new'
 	
-# post '/login'    => 'sessions#create'
+post '/login'    => 'sessions#create'
 	
 delete '/logout' => 'sessions#destroy' 
+
+delete '/pictures/:id(.:format)' => 'pictures#destroy'
 end

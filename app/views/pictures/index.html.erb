@@ -10,7 +10,7 @@
             <%= image_tag picture.url, class: 'card-img-top', style: 'max-width: 100%; height: 20rem;' %>
             <div class="card-body">
               <%= picture.title %>
-              <p class="card-text">Hi, I am kirby</p>
+              <p class="card-text"><%= picture.description %></p>
               <%= link_to 'Show', picture, class: 'btn btn-primary', style: 'color: white;'%>
             </div>
           </div>

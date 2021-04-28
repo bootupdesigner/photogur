@@ -20,5 +20,7 @@
   <%= @picture.user_id %>
 </p>
 
+<% if logged_in? && (current_user.id == @picture.user_id) %>
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
+<% end %>
 <%= link_to 'Back', pictures_path %>

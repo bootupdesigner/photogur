@@ -38,11 +38,6 @@ class PicturesController < ApplicationController
 
   # PATCH/PUT /pictures/1 or /pictures/1.json
   def update
-    if @picture.update(picture_params)
-      redirect_to @picture
-    else
-      render "Edit"
-    end
 
     respond_to do |format|
       if @picture.update(picture_params)
@@ -57,11 +52,6 @@ class PicturesController < ApplicationController
 
   # DELETE /pictures/1 or /pictures/1.json
   def destroy
-    if @picture.destroy(picture_params)
-      redirect_to @picture
-  else
-      render "Destroy"
-  end
 
     @picture.destroy
     respond_to do |format|
