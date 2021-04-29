@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+.in-app {
+margin-bottom: 10vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    margin-top: 30px;
+}

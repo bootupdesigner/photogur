@@ -2,6 +2,8 @@
 
 <%= render 'form', picture: @picture %>
 
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %> |
+<%= link_to 'Back', pictures_path %> 
+
+<% if logged_in? && (current_user.id == @picture.user_id) %>|
 <%= link_to 'Delete', picture_path(@picture), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

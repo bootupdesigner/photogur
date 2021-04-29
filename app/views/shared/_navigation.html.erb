@@ -1,0 +1,26 @@
+
+<!-- new code -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to 'Photogur', root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to 'Home', pictures_path, class: 'nav-link' %>
+        </li>
+        <li>
+        <% if current_user %>
+          <%= link_to 'Log Out', logout_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Log In', login_path %> or <br>
+      <%= link_to 'Sign Up', new_user_path %>
+    <% end %>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

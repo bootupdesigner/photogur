@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  before_action :authorize, only: [:new]
   before_action :find_picture, only: [:show, :edit, :update, :destroy]
   helper_method :logged_in?, :current_user
   before_action :set_picture, only: [ :show, :edit, :update, :destroy ]
