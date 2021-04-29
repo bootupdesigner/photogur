@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :pictures 
 root 'pictures#index'
 
-resources :users, only: [:create, :show]
+resources :users, only: [:create]
   get "/signup", to: "users#new"
   get "/login", to: "sessions#new"
   post "/sessions", to: "sessions#create"
