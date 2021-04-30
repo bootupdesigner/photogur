@@ -1,6 +1,6 @@
 
 <!-- new code -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <%= link_to 'Photogur', root_path, class:"navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,15 +11,14 @@
         <li class="nav-item">
           <%= link_to 'Home', pictures_path, class: 'nav-link' %>
         </li>
-        <li>
-        <% if current_user %>
-          <%= link_to 'Log Out', logout_path, method: :delete %>
+      </ul>
+      <span class="navbar-text">
+      <% if current_user %>
+      <%= "Logged in as #{current_user.email}" %> | <%= link_to 'Log Out', logout_path, method: :delete %>
     <% else %>
       <%= link_to 'Log In', login_path %> or <%= link_to 'Sign Up', new_user_path %>
     <% end %>
-        </li>
-        </li>
-      </ul>
+      </span>
     </div>
   </div>
 </nav>
